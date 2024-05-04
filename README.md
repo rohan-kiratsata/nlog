@@ -1,6 +1,6 @@
-# Nlog
+# Nlog (pronouced as 'en-log')
 
-Open-source personal blog website built with Next.js 14 and MDX.
+Open-source static blog website built with Next.js 14 and MDX.
 
 ## Tech Stack
 
@@ -8,9 +8,16 @@ Open-source personal blog website built with Next.js 14 and MDX.
 - Styling: [TailwindCSS](https://tailwindcss.com)
 - UI Components: [shadcn/ui](https://ui.shadcn.com)
 - Markdown: [@next/mdx](https://www.npmjs.com/package/@next/mdx)
+- Analytics: [text](https://umami.is)
   
-## Features
+## Features to be implemented
 
-- infinite scroll
-- syntax highlighter
-- 
+- [ ] infinite scroll
+- [ ] syntax highlighter
+- [ ] sorting filters:
+  - tags
+  - categories
+  - featured posts
+- [ ] page views and analytics with umami
+- [ ] SEO Optimization
+  
