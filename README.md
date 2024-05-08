@@ -1,6 +1,6 @@
 # Nlog (pronouced as 'en-log')
 
-Open-source static blog website built with Next.js 14 and MDX.
+Open-source static blog website template built with Next.js 14 and MDX.
 
 ## Tech Stack
 
@@ -8,7 +8,7 @@ Open-source static blog website built with Next.js 14 and MDX.
 - Styling: [TailwindCSS](https://tailwindcss.com)
 - UI Components: [shadcn/ui](https://ui.shadcn.com)
 - Markdown: [@next/mdx](https://www.npmjs.com/package/@next/mdx)
-- Analytics: [text](https://umami.is)
+- Analytics: [Umami](https://umami.is)
   
 ## Features to be implemented
 
