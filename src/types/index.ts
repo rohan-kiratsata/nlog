@@ -14,3 +14,16 @@ export interface NavWithOptionalChildren extends NavItem {
   items?: NavItemWithChildren[];
 }
 export type MainNavItem = NavWithOptionalChildren;
+
+export type Author = {
+  name: string;
+  picture: string;
+};
+
+export type Post = {
+  title: string;
+  slug: string;
+  date: string;
+  coverImage: string;
+  author: Author;
+};

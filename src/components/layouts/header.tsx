@@ -10,7 +10,7 @@ export default function Header() {
       <div className="container flex h-16 items-center">
         <MainNavbar navItems={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end">
-          <Button size={"icon"}>
+          <Button size={"icon"} variant="outline" className="!p-1">
             <Github />
           </Button>
         </div>
