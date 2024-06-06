@@ -15,25 +15,23 @@ export const siteConfig = {
         {
           title: "Blogs",
           href: "/blogs",
-          description: "all the blogs posted till now.",
+          description: "explore all the blogs",
           items: [],
         },
         {
           title: "GitHub",
           external: true,
           href: "https://github.com/rohan-kiratsata/nlog",
-          description: "explore blog categories",
+          description: "Clone this repository",
           items: [],
         },
         {
           title: "About",
           href: "/about",
-          description: "a bit about us",
+          description: "a bit about the platform",
           items: [],
         },
       ],
     },
-
-    // TODO: Map out categories here, when created
   ] satisfies MainNavItem[],
 };

@@ -20,6 +20,15 @@ export type Author = {
   picture: string;
 };
 
+export type Tag = {
+  name: string;
+};
+
+export type Category = {
+  name: string;
+  slug: string;
+};
+
 export type Post = {
   title: string;
   slug: string;
