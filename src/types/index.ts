@@ -1,3 +1,5 @@
+import { strict } from "assert";
+
 export interface NavItem {
   title: string;
   href?: string;
@@ -35,4 +37,10 @@ export type Post = {
   date: string;
   coverImage: string;
   author: Author;
+};
+
+export type PostDirectory = {
+  filePath: string;
+  frontMatter: { [key: string]: any };
+  content: string;
 };
