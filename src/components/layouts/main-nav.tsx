@@ -171,4 +171,4 @@ const CategoryItem = React.forwardRef<
     </li>
   );
 });
-ListItem.displayName = "CategoryItem";
+CategoryItem.displayName = "CategoryItem";
