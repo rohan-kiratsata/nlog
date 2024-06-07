@@ -6,7 +6,7 @@ const post_directory = path.join(process.cwd(), "_posts");
 
 export function readPosts(directory = post_directory) {
   const files = fs.readdirSync(directory);
-  let posts = [];
+  let posts: any = [];
   console.log(posts);
 
   files.forEach((file) => {
