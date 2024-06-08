@@ -78,7 +78,6 @@ export default function MainNavbar({ navItems }: { navItems: MainNavItem[] }) {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      {/* Search Bar */}
     </div>
   );
 }
