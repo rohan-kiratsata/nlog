@@ -1,6 +1,6 @@
 # Nlog (pronouced as 'en-log')
 
-Open-source static blog website template built with Next.js 14 and MDX.
+Open-source markdown based starter blog template using Next.js 14 App Router.
 
 ## Tech Stack
 
