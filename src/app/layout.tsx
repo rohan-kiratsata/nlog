@@ -3,6 +3,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/layouts/header";
+import MainSidebar from "@/components/layouts/sidebar/main-sidebar";
+import { Shell } from "@/components/shell";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,7 +31,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <Shell>
+            <MainSidebar />
+            {children}
+          </Shell>
         </ThemeProvider>
       </body>
     </html>
