@@ -44,3 +44,8 @@ export type PostDirectory = {
   frontMatter: { [key: string]: any };
   content: string;
 };
+
+export type ReadPostOptions = {
+  directory?: string;
+  extensions?: string[];
+};

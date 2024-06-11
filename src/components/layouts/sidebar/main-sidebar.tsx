@@ -15,10 +15,10 @@ export default function MainSidebar() {
           <ScrollArea className="h-screen w-[260px]">
             <NewsletterCard />
             <Shell variant="sidebar" className="">
-              <h4 className="text-base font-semibold tracking-tight">
+              <h6 className="text-base font-semibold tracking-tight">
                 Categories
-              </h4>
-              <div className="grid grid-cols-1 gap-2 ">
+              </h6>
+              <div className="grid grid-cols-1 gap-1">
                 {categories.map((category: Category) => (
                   <SidebarItem
                     key={category.name}

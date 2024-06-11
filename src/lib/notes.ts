@@ -1,29 +1,35 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { PostDirectory, ReadPostOptions } from "@/types";
 
-const post_directory = path.join(process.cwd(), "_posts");
+const defaultDirectory = path.join(process.cwd(), "posts");
 
-export function readPosts(directory = post_directory) {
+function readPosts(options: ReadPostOptions = {}): PostDirectory[] {
+  const { directory = defaultDirectory, extensions = [".md"] } = options;
+
   const files = fs.readdirSync(directory);
-  let posts: any = [];
-  console.log(posts);
+  let posts: PostDirectory[] = [];
 
   files.forEach((file) => {
     const full_path = path.join(directory, file);
     const stat = fs.statSync(full_path);
 
     if (stat.isDirectory()) {
-      posts = posts.concat(readPosts(full_path));
-    } else if (path.extname(file) === ".md") {
+      posts = posts.concat(readPosts({ ...options, directory: full_path }));
+    } else if (extensions.includes(path.extname(file))) {
       const fileContents = fs.readFileSync(full_path, "utf8");
       const { data, content } = matter(fileContents);
 
       posts.push({
         filePath: full_path.replace(process.cwd(), ""),
-        front_matter: data,
+        frontMatter: data,
         content,
       });
     }
   });
+
+  return posts;
 }
+
+export default readPosts;
