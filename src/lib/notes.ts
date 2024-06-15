@@ -32,4 +32,17 @@ function readPosts(options: ReadPostOptions = {}): PostDirectory[] {
   return posts;
 }
 
-export default readPosts;
+function getTags(): any {
+  const posts = readPosts();
+  const tags: Set<string> = new Set();
+
+  posts.forEach((post) => {
+    if (post.frontMatter.tags) {
+      post.frontMatter.tags.forEach((tag: string) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags);
+}
+
+export { readPosts, getTags };

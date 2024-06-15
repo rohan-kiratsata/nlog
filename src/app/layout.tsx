@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/layouts/header";
 import MainSidebar from "@/components/layouts/sidebar/main-sidebar";
 import { Shell } from "@/components/shell";
+import RightSidebar from "@/components/layouts/sidebar/right-sidebar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,9 +32,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <Shell>
+          <Shell className="flex items-start justify-between">
             <MainSidebar />
-            {children}
+            <Shell>{children}</Shell>
+            <RightSidebar />
           </Shell>
         </ThemeProvider>
       </body>

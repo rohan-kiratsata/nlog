@@ -1,7 +1,7 @@
 ---
-title: 'test'
-date: '12th Nov 2024'
-tags: ['test', 'webdev', 'android']
+title: 'blog 1'
+date: '05th May 2024'
+tags: ['test 2', 'rust', 'react']
 ---
 
 ## Test
