@@ -1,7 +1,7 @@
 ---
-title: 'test'
-date: '12th Nov 2024'
-tags: ['test', 'webdev', 'android']
+title: "Comprehensive guide to build mini http server in Golang "
+date: "12th Nov 2024"
+tags: ["test", "webdev", "android"]
 ---
 
 ## Test

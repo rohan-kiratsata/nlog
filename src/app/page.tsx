@@ -1,16 +1,17 @@
+import React from "react";
+import HomeGrid from "@/components/layouts/home-grid";
 import { readPosts } from "@/lib/notes";
-import Image from "next/image";
 
 export default function Home() {
   const posts = readPosts();
-  console.log("posts:", posts);
+
   return (
     <>
       <div>
-        {/* {posts.map((post, index) => {
-          return <div key={index}>{post.filePath}</div>;
-        })} */}
-        {/* {posts.map((post) => post.filePath)} */}
+        <h1 className="mb-5 text-xl font-semibold tracking-tight">
+          Latest Posts
+        </h1>
+        <HomeGrid data={posts} />
       </div>
     </>
   );

@@ -43,6 +43,7 @@ export type PostDirectory = {
   filePath: string;
   frontMatter: { [key: string]: any };
   content: string;
+  slug: string;
 };
 
 export type ReadPostOptions = {

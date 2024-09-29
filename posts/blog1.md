@@ -1,7 +1,7 @@
 ---
-title: 'blog 1'
-date: '05th May 2024'
-tags: ['test 2', 'rust', 'react']
+title: "How to render markdown data in next.js "
+date: "05th May 2024"
+tags: ["test 2", "rust", "react"]
 ---
 
 ## Test

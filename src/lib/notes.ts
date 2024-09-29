@@ -21,10 +21,13 @@ function readPosts(options: ReadPostOptions = {}): PostDirectory[] {
       const fileContents = fs.readFileSync(full_path, "utf8");
       const { data, content } = matter(fileContents);
 
+      const slug = `/blog/${path.basename(file, path.extname(file))}`;
+
       posts.push({
         filePath: full_path.replace(process.cwd(), ""),
         frontMatter: data,
         content,
+        slug,
       });
     }
   });
