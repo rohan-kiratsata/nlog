@@ -28,7 +28,7 @@ export type Tag = {
 
 export type Category = {
   name: string;
-  slug: string;
+  slug?: string;
 };
 
 export type Post = {

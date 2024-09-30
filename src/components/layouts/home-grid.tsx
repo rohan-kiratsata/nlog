@@ -15,7 +15,7 @@ type FrontMatter = {
 
 export default function HomeGrid({ data }: { data: any[] }) {
   return (
-    <div className="grid grid-cols-1 gap-5">
+    <div className="grid grid-cols-1 gap-3">
       {data.map((item, index) => (
         <HomeCard key={index} item={item} />
       ))}

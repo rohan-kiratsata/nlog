@@ -22,7 +22,6 @@ export default function HomeCard({ item }: { item: any }) {
               ))}
           </CardDescription>
         </CardHeader>
-        <CardContent className="p-2"></CardContent>
       </Card>
     </Link>
   );
