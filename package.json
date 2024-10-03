@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^0.0.51",
+    "@ai-sdk/openai": "^0.0.63",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.14",
@@ -18,6 +20,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@tailwindcss/typography": "^0.5.15",
     "@types/mdx": "^2.0.13",
+    "ai": "^3.4.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
@@ -32,7 +35,8 @@
     "rehype-highlight": "^7.0.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "use-debounce": "^10.0.1"
+    "use-debounce": "^10.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

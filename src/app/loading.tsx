@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
@@ -16,15 +17,13 @@ export default function Loading() {
               className="animate-pulse cursor-pointer hover:bg-neutral-800"
             >
               <CardHeader className="text-2xl font-semibold">
-                <div className="max-h-16 min-h-[1.5em] overflow-hidden">
-                  <div className="h-6 w-3/4 rounded bg-gray-600"></div>
-                </div>
+                <Skeleton className="h-4 w-10 rounded" />
                 <CardDescription className="mt-2">
-                  <div className="h-4 w-1/4 rounded bg-gray-600"></div>
+                  <Skeleton className="h-4 w-1/4 rounded" />
                 </CardDescription>
                 <CardDescription className="flex gap-2">
-                  <div className="h-4 w-16 rounded bg-gray-600"></div>
-                  <div className="h-4 w-16 rounded bg-gray-600"></div>
+                  <Skeleton className="h-4 w-20 rounded" />
+                  <Skeleton className="h-4 w-16 rounded" />
                 </CardDescription>
               </CardHeader>
             </Card>

@@ -2,6 +2,7 @@
 title: "How to render markdown data in Next.js"
 date: "05th May 2024"
 tags: ["test 2", "rust", "react"]
+categories: ["Development"]
 ---
 
 ## Introduction
@@ -32,8 +33,15 @@ Markdown is a lightweight markup language that's easy to read and write. Here ar
 Inline code can be written like `this`. For larger code blocks, use triple backticks:
 
 ```javascript
-function renderMarkdown(content) {
+function binarySearch(arr, target) {
   // Implementation goes here
-  return parsedContent;
+  return arr.indexOf(target);
 }
 ```
+
+## Tables in Markdown
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Data 1   | Data 2   | Data 3   |
+| Data 4   | Data 5   | Data 6   |

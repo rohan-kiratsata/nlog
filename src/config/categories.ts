@@ -3,7 +3,7 @@ import { Category } from "@/types";
 export const categories = [
   {
     name: "Design",
-    slug: "/design-101",
+    slug: "/design-101", // pass custom slug if you want
   },
   {
     name: "Development",
