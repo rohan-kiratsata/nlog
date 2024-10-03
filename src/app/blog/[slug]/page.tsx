@@ -1,22 +1,32 @@
 import React from "react";
-import Link from "next/link";
-import { readPosts } from "@/lib/notes";
+import { readPost } from "@/lib/notes";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXComponents } from "@/components/mdx-component";
+import rehypeHighlight from "rehype-highlight";
 
-export default function BlogPage() {
-  const posts = readPosts();
+export default async function BlogPost({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await readPost(params.slug);
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
-              {post.frontMatter.title || post.slug}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <article className="prose prose-lg dark:prose-invert mx-auto">
+      <h1>{post.frontMatter.title || post.slug}</h1>
+      <MDXRemote
+        source={post.content}
+        components={MDXComponents}
+        options={{
+          mdxOptions: {
+            rehypePlugins: [rehypeHighlight],
+          },
+        }}
+      />
+    </article>
   );
 }

@@ -1,9 +1,17 @@
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
+import { Card, CardDescription, CardHeader } from "./ui/card";
 import Link from "next/link";
 
-export default function HomeCard({ item }: { item: any }) {
-  console.log(item);
+type Blog = {
+  frontMatter: {
+    title: string;
+    date: string;
+    tags: string[];
+  };
+  slug: string;
+};
+
+export default function HomeCard({ item }: { item: Blog }) {
   const { frontMatter, slug } = item;
   return (
     <Link href={slug}>
