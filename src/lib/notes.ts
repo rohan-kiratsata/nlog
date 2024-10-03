@@ -5,6 +5,8 @@ import { PostDirectory, ReadPostOptions } from "@/types";
 
 const defaultDirectory = path.join(process.cwd(), "posts");
 
+const postsDirectory = path.join(process.cwd(), "posts");
+
 function readPosts(options: ReadPostOptions = {}): PostDirectory[] {
   const { directory = defaultDirectory, extensions = [".md"] } = options;
 
@@ -49,3 +51,20 @@ function getTags(): any {
 }
 
 export { readPosts, getTags };
+
+export function readPost(slug: string) {
+  const fullPath = path.join(postsDirectory, `${slug}.md`);
+
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  return {
+    slug: `/blog/${slug}`,
+    frontMatter: data,
+    content,
+  };
+}

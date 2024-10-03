@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { categories } from "@/config/categories";
 import { Category } from "@/types";
+import { generateSlug } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +24,7 @@ export default function MainSidebar() {
                   <SidebarItem
                     key={category.name}
                     title={category.name}
-                    href={category.slug}
+                    href={`/c${generateSlug(category.name, category.slug)}`}
                   />
                 ))}
               </div>
