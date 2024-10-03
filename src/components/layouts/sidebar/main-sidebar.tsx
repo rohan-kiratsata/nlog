@@ -10,29 +10,27 @@ import React from "react";
 
 export default function MainSidebar() {
   return (
-    <>
-      <aside className="">
-        <Shell variant="sidebar">
-          <ScrollArea className="h-screen w-[260px]">
-            <NewsletterCard />
-            <Shell variant="sidebar" className="">
-              <h6 className="text-base font-semibold tracking-tight">
-                Categories
-              </h6>
-              <div className="grid grid-cols-1 gap-1">
-                {categories.map((category: Category) => (
-                  <SidebarItem
-                    key={category.name}
-                    title={category.name}
-                    href={`/c${generateSlug(category.name, category.slug)}`}
-                  />
-                ))}
-              </div>
-            </Shell>
-          </ScrollArea>
-        </Shell>
-      </aside>
-    </>
+    <aside className="hidden lg:block">
+      <Shell variant="sidebar">
+        <ScrollArea className="h-screen w-[260px]">
+          <NewsletterCard />
+          <Shell variant="sidebar" className="">
+            <h6 className="text-base font-semibold tracking-tight">
+              Categories
+            </h6>
+            <div className="grid grid-cols-1 gap-1">
+              {categories.map((category: Category) => (
+                <SidebarItem
+                  key={category.name}
+                  title={category.name}
+                  href={`/c${generateSlug(category.name, category.slug)}`}
+                />
+              ))}
+            </div>
+          </Shell>
+        </ScrollArea>
+      </Shell>
+    </aside>
   );
 }
 

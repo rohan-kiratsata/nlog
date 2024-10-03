@@ -10,27 +10,24 @@ import React from "react";
 
 export default function RightSidebar() {
   const tags = getTags();
-  console.log(tags);
 
   return (
-    <>
-      <aside className="">
-        <Shell variant="sidebar">
-          <ScrollArea className="h-screen w-[260px]">
-            <Shell variant="sidebar" className="">
-              <h6 className="text-base font-semibold tracking-tight">
-                Popular Tags
-              </h6>
-              <div className="grid grid-cols-1 gap-2">
-                {tags.map((tag: any) => (
-                  <TagsItem key={tag} title={tag} />
-                ))}
-              </div>
-            </Shell>
-          </ScrollArea>
-        </Shell>
-      </aside>
-    </>
+    <aside className="hidden lg:block">
+      <Shell variant="sidebar">
+        <ScrollArea className="h-screen w-[260px]">
+          <Shell variant="sidebar" className="">
+            <h6 className="text-base font-semibold tracking-tight">
+              Popular Tags
+            </h6>
+            <div className="grid grid-cols-1 gap-2">
+              {tags.map((tag: any) => (
+                <TagsItem key={tag} title={tag} />
+              ))}
+            </div>
+          </Shell>
+        </ScrollArea>
+      </Shell>
+    </aside>
   );
 }
 

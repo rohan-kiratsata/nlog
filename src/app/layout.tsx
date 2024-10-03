@@ -7,6 +7,7 @@ import { Shell } from "@/components/shell";
 import RightSidebar from "@/components/layouts/sidebar/right-sidebar";
 import "highlight.js/styles/github-dark.css";
 import "./globals.css";
+import MobileNavbar from "@/components/layouts/mobile-nav";
 
 const fontSans = FontSans({
   subsets: ["latin"],

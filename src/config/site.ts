@@ -4,6 +4,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "NLog",
+  github: "https://github.com/rohan-kiratsata/nlog",
   description:
     "An open source starter blog template built with latest Next.js 14 app router, Tailwindcss and shadcn/ui.",
   url: "https://nlog.rohankiratsata.com/",
