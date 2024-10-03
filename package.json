@@ -21,7 +21,6 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
-    "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.10.0",
     "lucide-react": "^0.378.0",
@@ -31,8 +30,6 @@
     "react": "^18",
     "react-dom": "^18",
     "rehype-highlight": "^7.0.0",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "use-debounce": "^10.0.1"
