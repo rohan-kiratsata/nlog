@@ -5,6 +5,7 @@ import Link from "next/link";
 type Blog = {
   frontMatter: {
     title: string;
+    author: string;
     date: string;
     tags: string[];
   };
@@ -20,11 +21,19 @@ export default function HomeCard({ item }: { item: Blog }) {
           <div className="max-h-16 min-h-[1.5em] overflow-hidden">
             <h2 className="line-clamp-2">{frontMatter.title}</h2>
           </div>
-          <CardDescription className="mt-2">{frontMatter.date}</CardDescription>
+          <CardDescription className="mt-2">
+            <span className="text-white">
+              {frontMatter.author ?? "Anonymous"}
+            </span>{" "}
+            • <span className="text-sm">{frontMatter.date}</span>
+          </CardDescription>
           <CardDescription className="flex gap-2">
             {frontMatter.tags &&
               frontMatter.tags.map((tag: string, index: number) => (
-                <span key={index} className="text-xs text-primary">
+                <span
+                  key={index}
+                  className="font-mono text-xs tracking-tight text-primary"
+                >
                   #{tag}
                 </span>
               ))}

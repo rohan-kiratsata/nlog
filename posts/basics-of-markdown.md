@@ -1,6 +1,7 @@
 ---
 title: "How to render markdown data in Next.js"
 date: "05th May 2024"
+author: "Rohan"
 tags: ["test 2", "rust", "react"]
 categories: ["Development"]
 ---

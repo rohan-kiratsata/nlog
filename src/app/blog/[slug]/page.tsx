@@ -16,8 +16,17 @@ export default async function BlogPost({
   }
 
   return (
-    <article className="prose prose-lg dark:prose-invert mx-auto">
+    <article className="prose prose-lg mx-auto dark:prose-invert">
       <h1>{post.frontMatter.title || post.slug}</h1>
+      <div className="flex flex-col">
+        <span className="text-base font-semibold text-white">
+          {post.frontMatter.author ?? "Anonymous"}
+        </span>
+        <div className="">
+          <span className="text-sm">1 min read</span> •{" "}
+          <span className="text-sm">{post.frontMatter.date}</span>
+        </div>
+      </div>
       <MDXRemote
         source={post.content}
         components={MDXComponents}
